@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/*Declarar variables, colores como colore*/
+body{
+    background-image: url(./img/fondo-pagina.jpg);
+    background-size: cover;
+}
+:root {
+    --color_texto: #5c3d5b;
+    --color_elementos_fieldset: #4d3e6b;
+    --color_fieldset_boton: #f07360;
+
+}
+
+/**/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5%;
+}
+
+#logo {
+    width: 7%;
+    height: 5%;
+    margin: 3px;
+    /*Top, right, bottom, left*/
+}
+
+nav>ul {
+    list-style-type: none;
+    /*Se eliminan los marcaodres de la lista*/
+    display: flex;
+}
+
+.elementos-navegacion {
+    padding: 20px;
+    font-family: "Macondo", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/*se le aplica la fuente a todo el cuerdo del doc*/
+main {
+    font-family: "Macondo", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+
+}
+
+/*la unidad "em" es una unidad de medida, sugerida para las fuentes*/
+
+.elementos-navegacion a {
+    text-decoration: none;
+    color: var(--color_texto);
+}
+
+.elementos-navegacion a:hover {
+    /*uso de la pseudo-clase hover (al pasar el mause)*/
+    color: #f07360;
+    text-decoration: underline overline;
+}
+
+h1 {
+    color: var(--color_texto);
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    width: 70%;
+    font-weight: 400;
+    max-width: 700px;
+    min-width: 450px;
+    text-align: center;
+}
+
+legend {
+    text-align: left;
+    width: auto;
+    height: 30px;
+    font-size: 1.6em;
+}
+
+fieldset {
+    border-radius: var(--color_fieldset_boton);
+    border-radius: 1em;
+    color: var(--color_elementos_fieldset);
+    border-color: red;
+    margin: 20px;
+}
+
+/*establece el color de la primera letra de la variable definida
+*/
+legend::first-letter {
+    color: var(--color_fieldset_boton)
+}
+
+#datos-basicos,
+#datos-pedido,
+#datos-envio{
+    background-color: #f0f5d6;
+    padding: 30px 50px;
+    background-image: url(./img/fondo-pantalla-encuesta2.jpg);
+    background-size: cover ;
+}
+
+#datos-basicos label,
+#datos-pedido label{
+    display: block;/*hce que las etiquetas se muestre como elementos de bloque, asi no utliziamos elementos html*/
+
+}
+
+#datos-basicos{
+    background-image: url(./img/fondo-pantalla-encuesta0.jpg);
+    background-size: cover ;
+}
+#datos-pedido{
+    background-image: url(./img/fondo-pantalla-encuesta.jpg);
+    background-size: cover ;
+}
+#datos-envio{
+    background-image: url(./img/fondo-pantalla-encuesta3.jpg);
+    background-size: cover ;
+}
+
+
+#datos-basicos input,
+#datos-pedido input,
+#datos-envio input{
+    border:3px solid var(--color_elementos_fieldset) ;
+    width: 200px;
+    height: 30px;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus{
+    outline: none;
+    box-shadow: 5px 3px var(--color_elementos_fieldset);
+}
+#datos-pedido select[name="opciones-postre"]{
+    width: 200px;
+    height: 30px;
+    border: 3px solid var(--color_elementos_fieldset);
+}
+
+#datos-envio label{
+    display: inline-block;
+    padding: 2px;
+    margin: 4px;
+}
+#terminos{
+    margin: 20px;
+}
+
+main{
+    background-color: aliceblue;
+    margin: 0 auto;
+    width: 70%;
+    font-weight: 400;
+    max-width: 700px;
+    min-width: 450px;
+    text-align: center;
+    border-radius: 1em;
+}
+
+button[type="submit"]{
+    width: 120px;
+    height: 20px;
+    float: right;
+
+}
